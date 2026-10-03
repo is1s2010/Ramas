@@ -1,3 +1,90 @@
-body { font-family: sans-serif; background-color: #f4f4f4; color: #333; padding: 20px; }
-.comando { background: white; padding: 15px; margin-bottom: 10px; border-left: 5px solid #2ecc71; border-radius: 4px; }
-h1 { color: #2c3e50; }
+/* Importamos una fuente estilo 8-bits/Arcade desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body { 
+    /* Fondo oscuro con una cuadrícula sutil estilo TRON/Arcade */
+    background-color: #0d0514; 
+    background-image: 
+        linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 30px 30px;
+    
+    color: #ffffff; 
+    padding: 20px; 
+    font-family: 'Courier New', Courier, monospace; /* Fuente monoespaciada base */
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+
+h1 { 
+    font-family: 'Press Start 2P', cursive;
+    color: #ff00ff; /* Fucsia Neón */
+    /* Efecto de luz de neón usando text-shadow */
+    text-shadow: 
+        0 0 5px #ff00ff, 
+        0 0 15px #ff00ff, 
+        0 0 30px #ff00ff; 
+    font-size: 28px;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+header p {
+    font-family: 'Press Start 2P', cursive;
+    color: #00ffff; /* Cian Neón */
+    text-shadow: 0 0 8px #00ffff;
+    font-size: 12px;
+    margin-top: -10px;
+}
+
+#contenedor {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.comando { 
+    background: rgba(10, 10, 10, 0.8); /* Fondo casi negro translúcido */
+    padding: 20px 25px; 
+    border: 2px solid #00ff00; /* Borde verde neón */
+    border-radius: 8px; 
+    /* Sombra exterior e interior para efecto neón */
+    box-shadow: 
+        0 0 10px rgba(0, 255, 0, 0.5), 
+        inset 0 0 10px rgba(0, 255, 0, 0.2);
+    transition: all 0.3s ease; /* Transición suave para el hover */
+}
+
+/* Efecto al pasar el cursor (como si la máquina reaccionara) */
+.comando:hover {
+    transform: scale(1.02);
+    border-color: #fff;
+    box-shadow: 
+        0 0 20px #00ff00, 
+        inset 0 0 20px #00ff00;
+}
+
+.comando h2 {
+    font-family: 'Press Start 2P', cursive;
+    color: #ffff00; /* Amarillo Neón */
+    text-shadow: 0 0 10px #ffff00;
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 2px dashed rgba(255, 255, 0, 0.5);
+    padding-bottom: 10px;
+}
+
+.comando p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #e0e0e0;
+    margin: 0;
+}
